@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Canvas – Start mediaopptak",
+  "version": "1.0",
+  "description": "Åpner medieopptakeren i Canvas Speed Grader og klikker Start opptak.",
+  "permissions": ["scripting", "activeTab", "tabs", "storage", "alarms", "windows"],
+  "host_permissions": [
+    "https://*.instructure.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "start-opptak": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+U",
+        "mac": "Command+Shift+U"
+      },
+      "description": "Start mediaopptak"
+    }
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png"
+    }
+  }
+}

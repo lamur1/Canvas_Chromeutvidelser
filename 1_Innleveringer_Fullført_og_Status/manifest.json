@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Canvas – Fyll tomme poengfelt (kun essay)",
+  "version": "3.2",
+  "description": "Fyller inn 1 poeng i essayspørsmål i New Quizzes Speed Grader. Venter på Canvas-registrering.",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": [
+    "https://*.instructure.com/*",
+    "https://*.quiz-lti-dub-prod.instructure.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "kjor-godkjenn": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      },
+      "description": "Fyll tomme felt og godkjenn"
+    }
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png"
+    }
+  }
+}

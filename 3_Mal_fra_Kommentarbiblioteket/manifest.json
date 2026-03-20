@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Canvas – Sett inn kommentar",
+  "version": "1.0",
+  "description": "Henter kommentar fra biblioteket og setter inn elevens fornavn automatisk.",
+  "permissions": ["scripting", "activeTab", "tabs"],
+  "host_permissions": [
+    "https://*.instructure.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "sett-inn-kommentar": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+K",
+        "mac": "Command+Shift+K"
+      },
+      "description": "Sett inn kommentar fra bibliotek"
+    }
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png"
+    }
+  }
+}

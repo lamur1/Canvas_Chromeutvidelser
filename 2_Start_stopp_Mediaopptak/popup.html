@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      width: 200px;
+      padding: 16px;
+      margin: 0;
+    }
+    h2 { font-size: 13px; margin: 0 0 12px 0; color: #333; }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #0460a7;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    button:hover { background: #034d8a; }
+    button.stopp { background: #c0392b; }
+    button.stopp:hover { background: #a93226; }
+    button:disabled { opacity: 0.6; cursor: not-allowed; }
+    #status { margin-top: 10px; font-size: 11px; color: #555; min-height: 16px; }
+    .ok { color: green; }
+    .feil { color: red; }
+  </style>
+</head>
+<body>
+  <h2>Canvas mediaopptak</h2>
+  <button id="kjor">▶ Start opptak</button>
+  <div id="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

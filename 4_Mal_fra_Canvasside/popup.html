@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { width: 320px; padding: 14px; font-family: Arial, sans-serif; font-size: 13px; color: #333; }
+    button.hoved { width: 100%; padding: 10px; background: #0460a7; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 13px; margin-bottom: 12px; }
+    button.hoved:hover { background: #034f8a; }
+    .skillelinje { border: none; border-top: 1px solid #ddd; margin: 10px 0; }
+    .innstilling { font-size: 12px; color: #666; margin-bottom: 6px; }
+    .innstilling-rad { display: flex; gap: 6px; }
+    input { flex: 1; padding: 6px 8px; border: 1px solid #ccc; border-radius: 6px; font-size: 12px; }
+    button.liten { padding: 6px 12px; background: #0460a7; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; white-space: nowrap; }
+    button.liten:hover { background: #034f8a; }
+    #status { margin-top: 8px; font-size: 12px; color: #555; text-align: center; }
+    #url-status { font-size: 11px; text-align: center; margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <button class="hoved" id="btn">📋 Sett inn mal</button>
+  <div id="status"></div>
+  <hr class="skillelinje">
+  <div class="innstilling">URL til malsiden i Canvas:</div>
+  <div class="innstilling-rad">
+    <input id="url" type="text" placeholder="https://...">
+    <button class="liten" id="lagre">Lagre</button>
+  </div>
+  <div id="url-status"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
